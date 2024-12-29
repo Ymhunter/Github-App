@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextAppearance="@style/AppTheme.ToolBar" />
+
+    <ImageView
+        android:id="@+id/imageGithub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="26dp"
+        android:background="@drawable/github_logo" />
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@+id/imageGithub"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="16dp"
+        android:background="#D3D3D3"
+        android:fontFamily="@font/montserrat"
+        android:hint="Enter a GitHub Username"
+        android:singleLine="true"
+        android:imeOptions="actionSearch"
+        android:padding="16dp"
+        android:textColorHint="#808080" />
+
+    <TextView
+        android:id="@+id/textViewLanguages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchBar"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingLeft="16dp"
+        android:text="Popular Languages"
+        android:textColor="#FF9701"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textViewOrganizations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/languagesChips"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingLeft="16dp"
+        android:text="Popular Organizations"
+        android:textColor="#FF9701"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textViewUsers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/orgChips"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingLeft="16dp"
+        android:text="Popular Users"
+        android:textColor="#FF9701"
+        android:textSize="15dp" />
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/languagesChips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewLanguages"
+        android:layout_marginBottom="40dp"
+        app:chipBackgroundColor="@color/black"
+        app:chipCornerRadius="8dp"
+        app:singleLine="true">
+
+        <com.google.android.material.chip.Chip
+
+            android:id="@+id/kotlinLang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:backgroundTint="@color/white"
+            android:text="Kotlin"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeWidth="0.3dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/pythonLang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="Python"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeWidth="0.3dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/javaLang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="Java"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeWidth="0.3dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="C++"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeWidth="0.3dp" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/orgChips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewOrganizations"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="40dp"
+        app:chipBackgroundColor="@color/black"
+        app:chipCornerRadius="8dp"
+        app:singleLine="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/jetBrainsOrg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:backgroundTint="@color/white"
+            android:text="JetBrains"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeWidth="0.3dp" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:id="@+id/googleOrg"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="google"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeWidth="0.3dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/githubOrg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="github"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeWidth="0.3dp" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/usersChips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewUsers"
+        app:chipBackgroundColor="@color/black"
+        app:chipCornerRadius="8dp"
+        app:singleLine="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/hlineroUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:backgroundTint="@color/white"
+            android:text="hlinero"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeWidth="0.3dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/torvaldsUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="torvalds"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeWidth="0.3dp" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:id="@+id/gaearonUser"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="gaearon"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeWidth="0.3dp" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+</RelativeLayout>

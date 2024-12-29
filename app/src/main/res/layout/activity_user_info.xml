@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User.UserInfoActivity">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextAppearance="@style/AppTheme.ToolBar" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profilePicture"
+        android:layout_width="147dp"
+        android:layout_height="147dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="74dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="75dp">
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profilePicture"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        tools:text="Humberto Linero" />
+
+    <TextView
+        android:id="@+id/textViewUserCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userName"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:textColor="#898989"
+        android:textSize="15dp"
+        tools:text="Sweden" />
+
+    <TextView
+        android:id="@+id/followersCount"
+        android:layout_width="85dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewUserCountry"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        tools:text="17" />
+
+    <TextView
+        android:id="@+id/followingCount"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewUserCountry"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="165dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/repositoriesCount"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewUserCountry"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        tools:text="9" />
+
+    <TextView
+        android:id="@+id/followingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/followersCount"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="following"
+        android:textColor="#898989" />
+
+    <TextView
+        android:id="@+id/followersText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/followersCount"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="left"
+        android:text="followers"
+        android:textColor="#898989" />
+
+    <TextView
+        android:id="@+id/repositoriesText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/followersCount"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="right"
+        android:text="Repositories"
+        android:textColor="#898989" />
+
+    <TextView
+        android:id="@+id/About"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/followersText"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingLeft="20dp"
+        android:text="About"
+        android:textColor="#FF9701"
+        android:textSize="15dp" />
+
+    <ScrollView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/About">
+
+        <TextView
+            android:id="@+id/bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/About"
+            android:fontFamily="@font/montserrat"
+            android:letterSpacing="0.05"
+            android:lineHeight="17dp"
+            android:lineSpacingExtra="172sp"
+            android:paddingHorizontal="20dp"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            tools:text="Teaching Python and Android development. Currently focusing on improving myself, my tools, my methodologies, and my processes to provide better education. " />
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/Basics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingLeft="20dp"
+        android:text="Basics"
+        android:textColor="#FF9701"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/twitterIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/Basics"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/twitter_icon" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/twitterIcon"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="9dp"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/black"
+        tools:text="https://medium.com/@hlinero" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/internetIcon"
+        android:layout_width="16.5dp"
+        android:layout_height="16.5dp"
+        android:layout_below="@id/twitterIcon"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/website_icon" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/twitter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Basics"
+        android:layout_marginLeft="46dp"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/black"
+        tools:text="/@hlinero" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/hireableIcon"
+        android:layout_width="20dp"
+        android:layout_height="13.3dp"
+        android:layout_below="@id/internetIcon"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/hireable_icon" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/hireable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/internetIcon"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/black"
+        tools:text="Not hireable" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/companyIcon"
+        android:layout_width="20dp"
+        android:layout_height="13.3dp"
+        android:layout_below="@id/hireableIcon"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/company_icon" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hireableIcon"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/black"
+        tools:text="Linero Tech AB" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/companyIcon"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingLeft="20dp"
+        android:id="@+id/top3"
+        android:paddingTop="20dp"
+        android:text="Top 3 Langugages"
+        android:textColor="#FF9701"
+        android:textSize="15dp" />
+    <TextView
+        android:layout_width="35dp"
+        android:id="@+id/lang1"
+        android:layout_height="35dp"
+        android:layout_below="@+id/top3"
+        tools:text="lang1" />
+    <TextView
+        android:id="@+id/lang2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/lang1"
+        tools:text="lang2" />
+    <TextView
+        android:id="@+id/lang3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/lang2"
+        tools:text="lang3" />
+
+
+</RelativeLayout>
