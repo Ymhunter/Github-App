@@ -77,3 +77,7 @@ User Details: https://api.github.com/users/{username}
 User Repos: https://api.github.com/users/{username}/repos
 
 Followers: https://api.github.com/users/{username}/followers
+
+
+https://github.com/user-attachments/assets/c4d4a09f-4927-4485-9afb-475195e565b1
+
