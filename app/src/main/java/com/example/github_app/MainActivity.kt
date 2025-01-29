@@ -3,9 +3,13 @@ package com.example.github_app
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.inputmethod.EditorInfo
+import android.widget.Toast
+import com.example.github_app.Database.MyDBConnection
 import com.example.github_app.Repo.RepositoriesList
 import com.example.github_app.User.UserInfoActivity
 import com.example.github_app.databinding.ActivityMainBinding
+import java.text.SimpleDateFormat
+import java.util.Date
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -30,6 +34,25 @@ class MainActivity : AppCompatActivity() {
 
             if (i == EditorInfo.IME_ACTION_SEARCH) {
                 val userName = binding.searchBar.text.toString()
+                val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+                val dbcon: MyDBConnection = MyDBConnection(this@MainActivity, "UserDBInfo", 1)
+                val currentDate = sdf.format(Date())
+
+                if (!binding.searchBar.text.isEmpty()) {
+                    val result= dbcon.insert(userName, currentDate.toString())
+                    if (result.equals(-1))
+                    {
+                        Toast.makeText(applicationContext, "Record not inserted", Toast.LENGTH_SHORT).show()
+                    }
+                    else
+                    {
+                        Toast.makeText(applicationContext, "Record inserted", Toast.LENGTH_SHORT).show()
+                    }
+                }else
+                {
+                    Toast.makeText(applicationContext,  "Please insert values first", Toast.LENGTH_SHORT).show()
+                }
+
                 moveToUserActivity(userName)
                 return@setOnEditorActionListener true
             }
